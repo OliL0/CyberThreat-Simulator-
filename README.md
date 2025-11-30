@@ -12,8 +12,9 @@ Features
 - Educational Focus - Perfect for schools, training programs and workshops
 
 Technologies Used 
-- Frontend: HTML / CSS / JS 
-- Data Storage: JSON 
+- Frontend: HTML / CSS
+- Backend: Flask
+- Data Storage:
 
 Educational Purpose 
 This project is designed only for training and awareness not for any malicious use 
