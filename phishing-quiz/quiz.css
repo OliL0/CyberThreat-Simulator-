@@ -33,10 +33,49 @@ body {
     align-items: center;
     justify-content: center;
 }
-.button :hover {
+.button, .phishing-button:hover, .legit-button:hover {
     background-color: rgba(35, 85, 102, 0.767);
     transform: scale(1.05);
 }
 .scenario-box{
     max-width: 700px;
+}
+.phishing-button, .legit-button{
+    margin: 15px;
+    width: 150px;
+    height: 60px;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    font-size: 18px;
+    text-align: center;
+
+    background-color: rgba(63, 146, 173, 0.467);
+    color: black;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    font-weight: bold;
+}
+#scenario-box{
+    max-width: 700px;
+    margin: 30px;
+    padding: 25px;
+    display: flex;
+    justify-content: left;
+
+    background-color: #d7dae0;
+    border: solid 4px black;
+    border-radius: 15px;
+    box-shadow:grey 4px 4px 0px;
+}
+#scene-title, #scenario-content{
+    max-width: 700px;
+    margin: 30px;
+    padding: 10px;
+    display:flex;
+    justify-content: left;
+    background-color: #d7dae0;
+    border: solid 4px black;
+    border-radius: 15px;
+    box-shadow:grey 4px 4px 0px;
 }
