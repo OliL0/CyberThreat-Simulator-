@@ -69,13 +69,6 @@ body {
     box-shadow:grey 4px 4px 0px;
 }
 #scene-title, #scenario-content{
-    max-width: 700px;
-    margin: 30px;
-    padding: 10px;
     display:flex;
     justify-content: left;
-    background-color: #d7dae0;
-    border: solid 4px black;
-    border-radius: 15px;
-    box-shadow:grey 4px 4px 0px;
 }
