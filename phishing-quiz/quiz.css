@@ -10,6 +10,8 @@
 }
 body {
     background-color:#d7dae0;
+    align-items: center;
+    justify-content: center;
 }
 .return-home, .start-q{
     margin-top: 15px;
@@ -61,7 +63,9 @@ body {
     margin: 30px;
     padding: 25px;
     display: flex;
-    justify-content: left;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
 
     background-color: #d7dae0;
     border: solid 4px black;
@@ -70,5 +74,10 @@ body {
 }
 #scene-title, #scenario-content{
     display:flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+}
+#sender, #scenario-content{
     justify-content: left;
 }
