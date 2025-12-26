@@ -10,8 +10,11 @@
 }
 body {
     background-color:#d7dae0;
+    display:flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    min-height:100vh;
 }
 .return-home, .start-q{
     margin-top: 15px;
@@ -35,14 +38,33 @@ body {
     align-items: center;
     justify-content: center;
 }
-.button, .phishing-button:hover, .legit-button:hover {
+.phishing-button:hover, .legit-button:hover, #return-b:hover, #next-b:hover{
     background-color: rgba(35, 85, 102, 0.767);
     transform: scale(1.05);
 }
-.scenario-box{
-    max-width: 700px;
+.wrapper{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    max-width:700px;
+    width:90%;
+    margin-bottom:100vh;
 }
-.phishing-button, .legit-button{
+#scenario-box{
+    width: 100%;
+    padding: 30px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-sizing: border-box;
+
+    background-color: #d7dae0;
+    border: solid 4px black;
+    border-radius: 15px;
+    box-shadow:grey 4px 4px 0px;
+}
+.phishing-button, .legit-button, #return-b, #next-b{
     margin: 15px;
     width: 150px;
     height: 60px;
@@ -58,20 +80,6 @@ body {
     border-radius: 20px;
     font-weight: bold;
 }
-#scenario-box{
-    max-width: 700px;
-    margin: 30px;
-    padding: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-
-    background-color: #d7dae0;
-    border: solid 4px black;
-    border-radius: 15px;
-    box-shadow:grey 4px 4px 0px;
-}
 #scene-title, #scenario-content{
     display:flex;
     flex-direction: column;
@@ -80,4 +88,15 @@ body {
 }
 #sender, #scenario-content{
     justify-content: left;
+}
+.answer-buttons{
+    display:flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+}
+.main-title{
+    font-weight:bold;
+    font-size:30px;
+    display:left;
 }
