@@ -1,0 +1,129 @@
+{
+    "questions": 
+    [
+        {
+        "id": 1,
+        "difficulty": "easy",
+        "type": "email",
+    
+        "scenario": {
+         "sender": "",
+            "message-date": "",
+            "title": "",
+            "content": ""
+        },
+        "isPhishing": "true"
+},
+    {
+    "id": 2,
+    "difficulty": "easy",
+    "type": "email",
+    
+    "scenario": {
+        "sender": "",
+        "message-date": "",
+        "title": "",
+        "content": ""
+    },
+    "isPhishing": "true"
+},
+    {
+    "id": 3,
+    "difficulty": "easy",
+    "type": "email",
+    
+    "scenario": {
+        "sender": "",
+        "message-date": "01-11-2025",
+        "title": "",
+        "content": "",
+    "isPhishing": "true"   
+    },
+    "isPhishing": "true"
+},
+    {
+    "id": 4,
+    "difficulty": "medium",
+    "type": "email",
+    
+    "scenario": {
+        "sender": "",
+        "message-date": "",
+        "title": "",
+        "content": "",
+    "isPhishing": "true"    
+    },
+    "isPhishing": "true"
+},
+    {
+    "id": 5,
+    "difficulty": "medium",
+    "type": "email",
+    
+    "scenario": {
+        "sender": "",
+        "message-date": "",
+        "title": "",
+        "content": "",
+    "isPhishing": "false"    
+    },
+    "isPhishing": "true"
+},
+    {
+    "id": 6,
+    "difficulty": "medium",
+    "type": "email",
+    
+    "scenario": {
+        "sender": "",
+        "message-date": "",
+        "title": "",
+        "content": "",
+    "isPhishing": "true"    
+    },
+    "isPhishing": "true"
+},
+    {
+    "id": 7,
+    "difficulty": "hard",
+    "type": "email",
+    
+    "scenario": {
+        "sender": "",
+        "message-date": "",
+        "title": "",
+        "content": "",
+    "isPhishing": "true"    
+    },
+    "isPhishing": "true"
+},
+    {
+    "id": 8,
+    "difficulty": "hard",
+    "type": "email",
+    
+    "scenario": {
+        "sender": "",
+        "message-date": "",
+        "title": "",
+        "content": "",
+    "isPhishing": "true"    
+    },
+    "isPhishing": "true"
+},
+    {
+    "id": 9,
+    "difficulty": "hard",
+    "type": "email",
+    
+    "scenario": {
+        "sender": "",
+        "message-date": "",
+        "title": "",
+        "content": "",
+    "isPhishing": "false"    
+    },
+    "isPhishing": "true"
+}
+]
+}
