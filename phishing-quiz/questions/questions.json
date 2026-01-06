@@ -12,7 +12,8 @@
             "title": "",
             "content": ""
         },
-        "isPhishing": "true"
+        "isPhishing": true,
+        "explanation": ""
 },
     {
     "id": 2,
@@ -25,7 +26,8 @@
         "title": "",
         "content": ""
     },
-    "isPhishing": "true"
+    "isPhishing": true,
+    "explanation": ""
 },
     {
     "id": 3,
@@ -34,12 +36,11 @@
     
     "scenario": {
         "sender": "",
-        "message-date": "01-11-2025",
+        "message-date": "",
         "title": "",
-        "content": "",
-    "isPhishing": "true"   
+        "content": ""
     },
-    "isPhishing": "true"
+    "isPhishing": false
 },
     {
     "id": 4,
@@ -50,10 +51,9 @@
         "sender": "",
         "message-date": "",
         "title": "",
-        "content": "",
-    "isPhishing": "true"    
+        "content": ""  
     },
-    "isPhishing": "true"
+    "isPhishing": false
 },
     {
     "id": 5,
@@ -64,10 +64,9 @@
         "sender": "",
         "message-date": "",
         "title": "",
-        "content": "",
-    "isPhishing": "false"    
+        "content": ""  
     },
-    "isPhishing": "true"
+    "isPhishing": true
 },
     {
     "id": 6,
@@ -78,10 +77,9 @@
         "sender": "",
         "message-date": "",
         "title": "",
-        "content": "",
-    "isPhishing": "true"    
+        "content": ""   
     },
-    "isPhishing": "true"
+    "isPhishing": true
 },
     {
     "id": 7,
@@ -92,10 +90,9 @@
         "sender": "",
         "message-date": "",
         "title": "",
-        "content": "",
-    "isPhishing": "true"    
+        "content": ""  
     },
-    "isPhishing": "true"
+    "isPhishing": true
 },
     {
     "id": 8,
@@ -106,10 +103,9 @@
         "sender": "",
         "message-date": "",
         "title": "",
-        "content": "",
-    "isPhishing": "true"    
+        "content": ""  
     },
-    "isPhishing": "true"
+    "isPhishing": true
 },
     {
     "id": 9,
@@ -120,10 +116,9 @@
         "sender": "",
         "message-date": "",
         "title": "",
-        "content": "",
-    "isPhishing": "false"    
+        "content": ""   
     },
-    "isPhishing": "true"
+    "isPhishing": false
 }
 ]
 }
