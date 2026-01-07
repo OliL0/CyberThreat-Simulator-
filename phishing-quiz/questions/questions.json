@@ -18,7 +18,7 @@
     {
     "id": 2,
     "difficulty": "easy",
-    "type": "email",
+    "type": "text",
     
     "scenario": {
         "sender": "",
@@ -32,7 +32,7 @@
     {
     "id": 3,
     "difficulty": "easy",
-    "type": "email",
+    "type": "DM",
     
     "scenario": {
         "sender": "",
@@ -40,7 +40,8 @@
         "title": "",
         "content": ""
     },
-    "isPhishing": false
+    "isPhishing": false,
+    "explanation": ""
 },
     {
     "id": 4,
@@ -53,12 +54,13 @@
         "title": "",
         "content": ""  
     },
-    "isPhishing": false
+    "isPhishing": false,
+    "explanation": ""
 },
     {
     "id": 5,
     "difficulty": "medium",
-    "type": "email",
+    "type": "text",
     
     "scenario": {
         "sender": "",
@@ -66,12 +68,13 @@
         "title": "",
         "content": ""  
     },
-    "isPhishing": true
+    "isPhishing": true,
+    "explanation": ""
 },
     {
     "id": 6,
     "difficulty": "medium",
-    "type": "email",
+    "type": "DM",
     
     "scenario": {
         "sender": "",
@@ -79,7 +82,8 @@
         "title": "",
         "content": ""   
     },
-    "isPhishing": true
+    "isPhishing": true,
+    "explanation": ""
 },
     {
     "id": 7,
@@ -92,12 +96,13 @@
         "title": "",
         "content": ""  
     },
-    "isPhishing": true
+    "isPhishing": true,
+    "explanation": ""
 },
     {
     "id": 8,
     "difficulty": "hard",
-    "type": "email",
+    "type": "text",
     
     "scenario": {
         "sender": "",
@@ -105,12 +110,13 @@
         "title": "",
         "content": ""  
     },
-    "isPhishing": true
+    "isPhishing": true,
+    "explanation": ""
 },
     {
     "id": 9,
     "difficulty": "hard",
-    "type": "email",
+    "type": "DM",
     
     "scenario": {
         "sender": "",
@@ -118,7 +124,8 @@
         "title": "",
         "content": ""   
     },
-    "isPhishing": false
+    "isPhishing": false,
+    "explanation": ""
 }
 ]
 }
