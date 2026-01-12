@@ -4,13 +4,13 @@
         {
         "id": 1,
         "difficulty": "easy",
-        "type": "email",
+        "type": "text",
     
         "scenario": {
-         "sender": "",
-            "message-date": "",
-            "title": "",
-            "content": ""
+         "sender": "DPD delivery",
+            "message-date": "23/09/2025 19:52",
+            "title": "Atempted delivery Of your package",
+            "content": "we attempted to deliver your package however there was nobody avialable to receive it. To arrange a redelivery please click the link bleow http:/delivery-dpd.coom/re-schedule"
         },
         "isPhishing": true,
         "explanation": ""
@@ -18,12 +18,12 @@
     {
     "id": 2,
     "difficulty": "easy",
-    "type": "text",
+    "type": "email",
     
     "scenario": {
-        "sender": "",
-        "message-date": "",
-        "title": "",
+        "sender": "account-suport@goggle.uk",
+        "message-date": "29/01/2022 10:44",
+        "title": "Urgent account ",
         "content": ""
     },
     "isPhishing": true,
@@ -32,11 +32,11 @@
     {
     "id": 3,
     "difficulty": "easy",
-    "type": "DM",
+    "type": "text",
     
     "scenario": {
         "sender": "",
-        "message-date": "",
+        "message-date": "24/10/2025 14:32",
         "title": "",
         "content": ""
     },
@@ -50,7 +50,7 @@
     
     "scenario": {
         "sender": "",
-        "message-date": "",
+        "message-date": "05/03/2024 09:15",
         "title": "",
         "content": ""  
     },
@@ -64,7 +64,7 @@
     
     "scenario": {
         "sender": "",
-        "message-date": "",
+        "message-date": "31/12/2024 09:45",
         "title": "",
         "content": ""  
     },
@@ -78,7 +78,7 @@
     
     "scenario": {
         "sender": "",
-        "message-date": "",
+        "message-date": "10/01/2025 12:00",
         "title": "",
         "content": ""   
     },
@@ -92,7 +92,7 @@
     
     "scenario": {
         "sender": "",
-        "message-date": "",
+        "message-date": "22/11/2025 16:39",
         "title": "",
         "content": ""  
     },
@@ -106,7 +106,7 @@
     
     "scenario": {
         "sender": "",
-        "message-date": "",
+        "message-date": "04/08/2025 17:52",
         "title": "",
         "content": ""  
     },
@@ -120,7 +120,7 @@
     
     "scenario": {
         "sender": "",
-        "message-date": "",
+        "message-date": "17/07/2023 03:52",
         "title": "",
         "content": ""   
     },
