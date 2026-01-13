@@ -8,7 +8,7 @@
     
         "scenario": {
          "sender": "DPD delivery",
-            "message-date": "23/09/2025 19:52",
+            "message-date": "23/09/2025 10:52",
             "title": "Atempted delivery Of your package",
             "content": "we attempted to deliver your package however there was nobody avialable to receive it. To arrange a redelivery please click the link bleow http:/delivery-dpd.coom/re-schedule"
         },
@@ -21,13 +21,13 @@
     "type": "email",
     
     "scenario": {
-        "sender": "account-suport@goggle.uk",
-        "message-date": "29/01/2022 10:44",
-        "title": "Urgent account ",
-        "content": ""
+        "sender": "HR-payroll@gmail.com",
+        "message-date": "29/01/2022 12:44",
+        "title": "Set up e-payslips for your account",
+        "content": "We started getting all employees to change to e-payslips from paper paylsips.\n To set up your account please click this link below \nhttp:/payroll-setupp-free.com/setup"
     },
     "isPhishing": true,
-    "explanation": ""
+    "explanation": "This is a phishing email as show in a few ways. The sender is not specifically from a company domain instead it is from a generic google gmail account domain which is common by attackers to seem more legitimate. The link provided is also not legitimate as it does not link to a real platform instead it is trying to mimic one with payrolls and setup used in the link is trying to make it more legitimate. "
 },
     {
     "id": 3,
@@ -49,13 +49,13 @@
     "type": "email",
     
     "scenario": {
-        "sender": "",
+        "sender": "noreeply@google.uk",
         "message-date": "05/03/2024 09:15",
-        "title": "",
-        "content": ""  
+        "title": "Critical Security Alert",
+        "content": "Sign in attempt blocked\njohn.smith@gmail.com\nSomebody used your password to try to sign in to your account from an unusual location. we have taken steps to secure your account. Sign back into your account and reset your password from the link below \nhttp:/google-security-alerts.uk/reset-password "  
     },
-    "isPhishing": false,
-    "explanation": ""
+    "isPhishing": true,
+    "explanation": "This email scenario here is a pishing attempt as seen by a few indicators. First its the email address as it is not from a legitimate google source as seen from the spelling which reply is misspelled as reeply. Secondly the urgency in the title and content of the message which is a simple tactic that is used by attackers to try make the user act quickly seeing their account is at risk. Lastly the link is not a legitimate link and is trying to mimic a real google link with parts altered like ending with .uk and not .com"
 },
     {
     "id": 5,
@@ -68,7 +68,7 @@
         "title": "",
         "content": ""  
     },
-    "isPhishing": true,
+    "isPhishing": false,
     "explanation": ""
 },
     {
