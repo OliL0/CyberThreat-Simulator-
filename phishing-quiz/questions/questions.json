@@ -5,6 +5,8 @@
         "id": 1,
         "difficulty": "easy",
         "type": "text",
+        "main-title": "DPD delivery attempt?",
+        "scene-info":"You have received a text message from DPD delivery regarding a delivery attempt. Is this a phishing attempt?",
     
         "scenario": {
          "sender": "DPD delivery",
@@ -19,9 +21,11 @@
     "id": 2,
     "difficulty": "easy",
     "type": "email",
+    "main-title": "",
+    "scene-info":"",
     
     "scenario": {
-        "sender": "HR-payroll@gmail.com",
+        "sender": "HR-ppayroll@gmail.com",
         "message-date": "29/01/2022 12:44",
         "title": "Set up e-payslips for your account",
         "content": "We started getting all employees to change to e-payslips from paper paylsips.\n To set up your account please click this link below \nhttp:/payroll-setupp-free.com/setup"
@@ -33,34 +37,40 @@
     "id": 3,
     "difficulty": "easy",
     "type": "text",
+    "main-title":"",
+    "scene-info":"",
     
     "scenario": {
-        "sender": "",
+        "sender": "Unknown",
         "message-date": "24/10/2025 14:32",
-        "title": "",
-        "content": ""
+        "title": " ",
+        "content": "Your number has won £10000 pounds! IN the weekly draw. send your name, address, account detail to this number to claim. +1 0522567898"
     },
-    "isPhishing": false,
-    "explanation": ""
+    "isPhishing": true,
+    "explanation": "This is a phishing attempt as it claims that the person recieving this message has won a large sum of money even though they havent entered any competition. The message contains some spelling and gramamatical errors and comes from an unkown sender which is a very common indication of scam messages. It also requests personal information though SMS which is not a legitimate method to claim prizes, especially this high."
 },
     {
     "id": 4,
     "difficulty": "medium",
     "type": "email",
-    
+    "main-title":"",
+    "scene-info":"",
+
     "scenario": {
-        "sender": "noreeply@google.uk",
+        "sender": "noreply@security-google.uk",
         "message-date": "05/03/2024 09:15",
         "title": "Critical Security Alert",
-        "content": "Sign in attempt blocked\njohn.smith@gmail.com\nSomebody used your password to try to sign in to your account from an unusual location. we have taken steps to secure your account. Sign back into your account and reset your password from the link below \nhttp:/google-security-alerts.uk/reset-password "  
+        "content": "Sign in attempt blocked\njohn.smith@gmail.com\nSomebody used your password to try to sign in to your account from an unusual location. we have taken steps to secure your account. Sign back into your account and reset your password from the link below \nhttps://google-security.co/reset "  
     },
     "isPhishing": true,
-    "explanation": "This email scenario here is a pishing attempt as seen by a few indicators. First its the email address as it is not from a legitimate google source as seen from the spelling which reply is misspelled as reeply. Secondly the urgency in the title and content of the message which is a simple tactic that is used by attackers to try make the user act quickly seeing their account is at risk. Lastly the link is not a legitimate link and is trying to mimic a real google link with parts altered like ending with .uk and not .com"
+    "explanation":" This email scenario here represents a medium difficulty in recognising that it is phishing as it is very close to google's security alert emails. However there are some red flags which are presented if you look closer. The sender domain and the link dont match what google's actual domain is and the links also doesnt match with google's official domains. The message has very urgent language used by requesting immediate action by accessing the account through the link given."
 },
     {
     "id": 5,
     "difficulty": "medium",
     "type": "text",
+    "main-title":"",
+    "scene-info":"",
     
     "scenario": {
         "sender": "",
@@ -68,27 +78,31 @@
         "title": "",
         "content": ""  
     },
-    "isPhishing": false,
+    "isPhishing": true,
     "explanation": ""
 },
     {
     "id": 6,
     "difficulty": "medium",
     "type": "DM",
+    "main-title":"Microsoft support message?",
+    "scene-info":"Make sure you check your links and ",
     
     "scenario": {
-        "sender": "",
+        "sender": "Microsoft ",
         "message-date": "10/01/2025 12:00",
         "title": "",
-        "content": ""   
+        "content": "Thank you for using Support.To Continue with your activation please click here:\nhttps://support.microsoft.com/en-us"   
     },
-    "isPhishing": true,
-    "explanation": ""
+    "isPhishing": false,
+    "explanation": "This is not phishing as it is an actual microsoft support message. The link provided is a legitimate microsoft link to their main support page. "
 },
     {
     "id": 7,
     "difficulty": "hard",
     "type": "email",
+    "main-title":"",
+    "scene-info":"",    
     
     "scenario": {
         "sender": "",
@@ -103,6 +117,8 @@
     "id": 8,
     "difficulty": "hard",
     "type": "text",
+    "main-title":"",
+    "scene-info":"",
     
     "scenario": {
         "sender": "",
@@ -116,7 +132,9 @@
     {
     "id": 9,
     "difficulty": "hard",
-    "type": "DM",
+    "type": "email",
+    "main-title":"",
+    "scene-info":"",
     
     "scenario": {
         "sender": "",
