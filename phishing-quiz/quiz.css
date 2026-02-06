@@ -16,7 +16,7 @@ body {
     justify-content: center;
     min-height:100vh;
 }
-.return-home, .start-q{
+#return-home, #start-q{
     margin-top: 15px;
     width: 300px;
     height: 75px;
@@ -38,7 +38,7 @@ body {
     align-items: center;
     justify-content: center;
 }
-.phishing-button:hover, .legit-button:hover, #return-b:hover, #next-b:hover{
+.phishing-button:hover, .legit-button:hover, #return-b:hover, #next-b:hover, .start-q:hover, .return-home:hover{
     background-color: rgba(35, 85, 102, 0.767);
     transform: scale(1.05);
 }

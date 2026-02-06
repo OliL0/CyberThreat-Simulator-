@@ -15,14 +15,14 @@
             "content": "we attempted to deliver your package however there was nobody avialable to receive it. To arrange a redelivery please click the link bleow http:/delivery-dpd.coom/re-schedule"
         },
         "isPhishing": true,
-        "explanation": ""
+        "explanation": "This is a phishing attempt as the link goes to a unknown domain and in addition the mismatched spelling and urgent language used "
 },
     {
     "id": 2,
     "difficulty": "easy",
     "type": "email",
-    "main-title": "",
-    "scene-info":"",
+    "main-title": "Company changing payroll system ",
+    "scene-info":"Check the scenario carefully and pay close attention to the spellings and links ",
     
     "scenario": {
         "sender": "HR-ppayroll@gmail.com",
@@ -37,8 +37,8 @@
     "id": 3,
     "difficulty": "easy",
     "type": "text",
-    "main-title":"",
-    "scene-info":"",
+    "main-title":"Won the lottery? Lucky me",
+    "scene-info":"Did you really win the lottery ",
     
     "scenario": {
         "sender": "Unknown",
@@ -53,8 +53,8 @@
     "id": 4,
     "difficulty": "medium",
     "type": "email",
-    "main-title":"",
-    "scene-info":"",
+    "main-title":"Google login attempt?",
+    "scene-info":"Look out for language used and the links",
 
     "scenario": {
         "sender": "noreply@security-google.uk",
@@ -68,25 +68,25 @@
     {
     "id": 5,
     "difficulty": "medium",
-    "type": "text",
-    "main-title":"",
-    "scene-info":"",
+    "type": "email",
+    "main-title":"LinkedIn connection request?",
+    "scene-info":"Check who is trying to connect with you on LinkedIn",
     
     "scenario": {
-        "sender": "",
+        "sender": "notifications@LinkedIn.co",
         "message-date": "31/12/2024 09:45",
-        "title": "",
-        "content": ""  
+        "title": "Joe Gazi wants to connect",
+        "content": "Hi there,\n\nJoe Gazi (employee at X) would like to connect with you on LinkedIn.\n\nView profile and accept connection :\nhttps://wvw.linkedin.com.profile-view.net/profile/joe-gazi\n\nLinkedIn respects privacy."  
     },
     "isPhishing": true,
-    "explanation": ""
+    "explanation": "This is phishing. The domain wvw.linkedin.com.profile-view.net/profile/joe-gazi is fake - the real domain would be profile-view.net not linkedin.com. Legitimate LinkedIn emails also use linkedin.com/ but not in this way. The email format is more professional but the URL makes it more obvious also with the use of more urgent language."
 },
     {
     "id": 6,
     "difficulty": "medium",
     "type": "DM",
     "main-title":"Microsoft support message?",
-    "scene-info":"Make sure you check your links and ",
+    "scene-info":"Make sure you check your links and language",
     
     "scenario": {
         "sender": "Microsoft ",
@@ -101,49 +101,49 @@
     "id": 7,
     "difficulty": "hard",
     "type": "email",
-    "main-title":"",
-    "scene-info":"",    
+    "main-title":"IT department update ",
+    "scene-info":"check the emails carefully",    
     
     "scenario": {
-        "sender": "",
+        "sender": "itsupport@justIT.com",
         "message-date": "22/11/2025 16:39",
-        "title": "",
-        "content": ""  
+        "title": "Required: Password Policy Update",
+        "content": "Dear Team,\n\nAs part of our security enhancement initiative, all employees must update their passwords by Friday.\n\nPlease use our secure portal:\nhttps://portal.justIT.com/password-reset\n\nFailure to comply may result in account suspension.\n\nKind regards,\nIT Security Team"   
     },
     "isPhishing": true,
-    "explanation": ""
+    "explanation": "Phishing attempt. The sender email 'itsupport@justIT.com' is close but not the actual company domain (should be '@justit.com'). The urgency and threat of suspension is a pressure tactic. Legitimate IT departments typically don't send random unexpected password reset links."
 },
     {
     "id": 8,
     "difficulty": "hard",
-    "type": "text",
-    "main-title":"",
-    "scene-info":"",
+    "type": "email",
+    "main-title":"Netflix subscription renewal?",
+    "scene-info":"Read carefully and see if you actually have a renewal ",
     
     "scenario": {
-        "sender": "",
+        "sender": "alert@netflix.com",
         "message-date": "04/08/2025 17:52",
-        "title": "",
-        "content": ""  
+        "title": "Payment Method Update Required",
+        "content": "Your netflix subscription is set to be renewed in 3 days. Your payment method ending in **8275 has declined. Update your billing information to avoid further interuptions: https://netflix.com/account/billing-netflixsupport"  
     },
     "isPhishing": true,
-    "explanation": ""
+    "explanation": "This is phishing. The typo 'interuptions' instead of 'interruptions' is a slight indicator. The link may also look legitimate, scammers often display text thats fake when the hyperlink when you press or hover over the link will lead to another page. Always verify payment difficulties or issues with the site directly or in their app rather than pressing links on unexpected emails."
 },
     {
     "id": 9,
     "difficulty": "hard",
     "type": "email",
-    "main-title":"",
-    "scene-info":"",
+    "main-title":"Somebody has starred your repository",
+    "scene-info":"Your project is starting to get attention",
     
     "scenario": {
-        "sender": "",
-        "message-date": "17/07/2023 03:52",
-        "title": "",
-        "content": ""   
+        "sender": "notifications@github.com",
+        "message-date": "17/07/2023 13:52",
+        "title": "spot_bob starred your repository :OliL0/CyberThreat-Simulator-",
+        "content": "spot_bob starred OliL0/CyberThreat-Simulator. Repository: OliL0/CyberThreat-Simulator- An interactive education project designed to teach cyber security awareness through simulated scenarios and quizzes. Stars: 10. View repository:https://github.com/OliL0/CyberThreat-Simulator- View spot_bob's profile: https://github.com/spot_bob - You're receiving this because you own this repository. Change notifications settings: https://github.com/settings/notifications"   
     },
     "isPhishing": false,
-    "explanation": ""
+    "explanation": "This is a legitimate Github notification email for repository activity. Github sends these types of notifications when somebody stars, forks or watches your repository. The sender 'notifications@github.com' is a known legitimate sender for GitHub. The URLs 'github.com/OliL0/CyberThreat-Simulator-' and 'github.com/spot_bob' are valid GitHub profile and repository formats. The email content and structure is consistent with typical GitHub notifications, making this a genuine email rather than a phishing attempt. The notification link 'github.com/settings/notifications' is also a legitimate link. These notifications are quite commmon for public repositories."
 }
 ]
 }
