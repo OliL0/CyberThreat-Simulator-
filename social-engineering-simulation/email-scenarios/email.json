@@ -1,0 +1,131 @@
+[
+    {
+        "id": 1,
+        "sender": "Tyler Brady - Facilities",
+        "subject": "Fire Drill Next Tuesday - Door Propping Request",
+        "emailAddress": "tyler.brady@company.com",
+        "preview": "We need volunteers to prop open fire doors during the drill for easier evacuation...",
+        "time": "Yesterday 12:02 PM",
+        "unread": true,
+        "riskLevel": "medium",
+        "body": "Hello Everyone,\n\nWe are planning a fire drill on Tuesday at 14:30.\n\nTo help make the drill run smoother, we are looking for a few participants from each floor to hold the emergency doors open about 10 minutes before the drill. This will help make it run smoother and evacuation faster.\n\nAlso we will be testing the badge \n\nThanks for your help.\n\nTyler Brady\nFacilities",
+        "suspiciousElements": [
+            "prop open the emergency exit doors",
+            "share your badge number",
+            "temporary access list"
+        ],
+        "redFlags": [
+            "Requests to compromise physical security (propping doors)",
+            "Asks for badge numbers via email (security violation)",
+            "Creating opportunity for unauthorized building access"
+        ]
+    },
+    {
+        "id": 2,
+        "sender": "Business Departament - Uni Study",
+        "subject": "Workplace study - £50 gift card",
+        "emailAddress": "research@businessstudies-university.edu",
+        "preview": "Participate in our research study about workplace productivity. Earn up to a £50 gift card...",
+        "time": "06th April 11:37 AM",
+        "unread": true,
+        "riskLevel": "high",
+        "body": "Dear Employees,\n\nWe are conducting a study on workplace productivity and company culture.\n\nYour company has been identified as suitable sample for our research. Participating in this survery will take about 20 minutes and you will receive a £50 gift card.\n\nThis survey includes:\n- What your typical workday schedule is and your work patterns\n- When your office is busiest and or the quietest\n- Security procedures like what badge systems you use, visitor protocols etc\n- The technologies and software platforms used within your department\n- what employee count you have in your departament and the department structure\n\nAll responses will be confidential and only used for academic research purposes.\n\nIf you are interested please reply to this email and we will send you the survey link and gift card code.\n\nDr. Henry Fooley\nBusiness Studies Department",
+        "suspiciousElements": [
+            "£50 Amazon gift card",
+            "Security procedures like what badge systems you use, visitor protocols etc",
+            "the technologies and software platforms used within your department",
+            "what employee count you have in your departament and the department structure"
+        ],
+        "redFlags": [
+            "Unexpected survey with questions about security and how the company works",
+            "Baiting with a gift card incentive",
+            "Requests dettailed information about physical and digital security procedures",
+            "Reconnaissance for potential attack"
+        ]
+    },
+    {
+        "id": 3,
+        "sender": "Thomas Paul ",
+        "subject": "Earth Day Initiative: Ride-Share Buddy System",
+        "emailAddress": "sustainability@company.com",
+        "preview": "Join the new carpooling program. Share your home address and schedule to find ride-share partners...",
+        "time": "25th March 9:15 AM",
+        "unread": false,
+        "riskLevel": "low",
+        "body": "Hello everyone,\n\nNext month for Earth Day, we are starting a carpooling program to help reduce our carbon footprint!\n\nSign up here if interested: https://intranet.company.com/sustainability\n\nAfter signing up it will match you with collegues that follow the same route as you so you can ride share together. All information is kept private and only shared with potential carpool matches who you approve of.\n\nBenefits:\n- Save on parking\n- HOV lane access\n- Helps the environment\n- Meets colleagues\n\nIf you got any Questions, Please contact the Sustainability Committee at sustainability@company.com or visit us at the Green Team office (Building A, Room 215).\n\nHope to see you guys soon\n\nThomas Paul",
+        "suspiciousElements": [],
+        "redFlags": [
+            "Legitimate company initiative",
+            "Uses internal company portal",
+            "Normal workplace program"
+        ]
+    },
+    {
+        "id": 4,
+        "sender": "Jackson Chang ",
+        "subject": "Great meeting you at the Tech Conference!",
+        "emailAddress": "j.chang@techconsulting.net",
+        "preview": "Following up on our conversation about that software demo. Can I visit your office next week?",
+        "time": "Today at 9:29 AM",
+        "unread": true,
+        "riskLevel": "high",
+        "body": "Hi Peter,\n\nIt was nice having a chat with you at the Tech Conference last month. I really enjoyed hearing about your company's approach to data management.\n\nAs I mentioned, I'd love to show you a quick demo of our new analytics software. I think it could really help and benefit your team.\n\nI will be in the area next Wednesday and Thursday. Would it be an inconvenience if I stopped by your office? Maybe 4 PM on Wednesday? \n\nJust a few questions so i can plan the visit:\n- Your building address and the best entrance\n- If I need to check in at the reception or can you meet me?\n- If there is any visitor WiFi or do I needd to use my own hotspot?\n- If a conference room might be available for the demo?\n\nLooking forward to seeing you soon\n\nJackson Chang\nSenior Solutions\nTech Consulting Group",
+        "suspiciousElements": [
+            "It was nice having a chat with you at the Tech Conference last month",
+            "I stopped by your office?",
+            "visitor WiFi ",
+            "If a conference room might be available for the demo?"
+        ],
+        "redFlags": [
+            "Pretexting - claiming that they met you before even through you may not recognise them or remember the conversation",
+            "Asking about information about entering the building and visitor procedures",
+            "Gathering information about visitor WiFi and meeting rooms",
+            "Trying to arrange a visit without going through normal company procedures"
+        ]
+    },
+    {
+        "id": 5,
+        "sender": "Lorenzo Cooper - Building Next Door",
+        "subject": "Quick favour regarding a delivery",
+        "emailAddress": "L.cooper@neighbourcompany.com",
+        "preview": "Hi quick question about a delivery arriving for our office today...",
+        "time": "1 hour ago",
+        "unread": true,
+        "riskLevel": "critical",
+        "body": "Hi,\n\nI work at TechRespec Inc. in the building right next to yours. We're having a small issue this morning.\n\nOur office manager is off today and it look likes the cleaning crew changed the door codes last night. None of us currently have access and we're expecting a delivery later today. \n\nWould it be possible if somebody from your building can help us out? The delivery is for some computer equipment that needs to be dropped off.\n\n- If possible, could your security team let the delivery driver into the building and have them leave the boxes outside Suite 300?\n If it helps, the delivery driver should be arriving sometime this afternoon. If somebody could also leave the door open briefly after the delivery so we can take the packages, that would be helpful.\n\nThanks for any help you can give.\n\nLorenzo Cooper\nTechRespec Inc.",
+        "suspiciousElements": [
+            "let the delivery driver into the building ",
+            "If somebody could also leave the door open briefly"
+        ],
+        "redFlags": [
+            "Sender is asking for access to a building they do not work in",
+            "Asking somebody to let a delivery driver into the building, which could break security rules ",
+            "Message asks for a door to be left open which is unsafe and against security protocols",
+            "Sender is not somebody the employee might know so the request would have to get verified first"
+        ]
+    },
+    {
+        "id": 6,
+        "sender": "Bob Smith - Professional Development",
+        "subject": "Leadership Workshop Nomination",
+        "emailAddress": "hr-development@company.com",
+        "preview": "You've been nominated for a leadership development program. Please confirm your details...",
+        "time": "09:47 AM",
+        "unread": true,
+        "riskLevel": "high",
+        "body": "Hello, \n\nYou have recently been nominated by senior management for our Executive Leadership Development Program.\n\nThis programme is offered to a small number of employees each year and includes leadership coaching sessions, strategy and management workshops, networking opportunities with senior staff and potential career developmenet oportunities within the company.\n\nTo confirm your place in this programme, we will need to verify some details.\n\nPlease reply with the following information:\n- Your employee ID\n- Your current salary band\n- Your manager's name and email\n- Your personal mobile phone number\n- Your home address \n\nPlease send this information within the next 12-24 hours so we can confirm your participation in this programme.\nIf you have any questions, feel free to reply to this email\n\nBob Smith\nHuman Resources",
+        "suspiciousElements": [
+            "You have recently been nominated by senior management for our Executive Leadership Development Program.",
+            "Your employee ID",
+            "Your personal mobile phone number",
+            "Your home address ",
+            "Please send this information within the next 12-24 hours so we can confirm your participation in this programme."
+        ],
+        "redFlags": [
+            "Makes it sound like you were specifically chosen for this, which can make people trust the email quickly",
+            "Asks for sensitive information such as employee ID, salary details, phone number and home address",
+            "Message creates urgency by saying you must reply within 12-24 hours ",
+            "Pretexting used to make the person believe the email and justify asking for personal information. "
+        ]
+    }
+]

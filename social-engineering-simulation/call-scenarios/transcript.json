@@ -1,0 +1,94 @@
+[
+    {
+        "id": 1,
+        "caller": "Delivery Driver - UPS",
+        "callType": "Package Delivery Issue",
+        "phoneNumber": "+1 (555) 287-4931",
+        "preview": "Delivery driver at front door, needs someone to let him in to deliver packages...",
+        "time": "Just now",
+        "duration": "2:15",
+        "unread": true,
+        "riskLevel": "critical",
+        "transcript": "Caller: Hi, this is Juan from UPS. I am outside your building with a delivery but the entrance door is locked.\n\nEmployee: Did you try the intercom at the reception?\n\nCaller: Yes, I tried a few times but nobody answered. I have a few packages for different companies in your building and i am running late on todays schedule.\n\nEmployee: I am not sure if i can let people in.\n\nCaller: I understand,  but it would only take a minute. Could you buzz me in so i can leave the packages in the lobby? I have alot of stops left today and I dont want the deliveries delayed even more.\n\nEmployee: I am not sure...\n\nCaller: It would really help me out here. Otherwise I will have to take all these packages back to the depot",
+        "suspiciousElements": [
+            "Could you buzz me in so i can leave the packages in the lobby?",
+            "I have alot of stops left today and I dont want the deliveries delayed even more.",
+            "Otherwise I will have to take all these packages back to the depot"
+        ],
+        "redFlags": [
+            "The caller asks to be let into the building without proper verification",
+            "They create pressure by saying they are in a hurry and behind schedule ",
+            "Delivery drivers should contact the reception or building management, not the individual employees.",
+            "Letting unknown people into a secure building can break company security protocols and put employees at risk"
+        ]
+    },
+    {
+        "id": 2,
+        "caller": "Building Inspector - City Compliance",
+        "callType": "Emergency Safety Inspection",
+        "phoneNumber": "+1 (555) 746-2893",
+        "preview": "City inspector needs immediate access to check emergency systems after complaint...",
+        "time": "2 hours ago",
+        "duration": "4:10",
+        "unread": true,
+        "riskLevel": "critical",
+        "transcript": "Caller: Hello, This is Michael Grant from the city building safety departament.\n\nEmployee: Hi how can i help?\n\nCaller: We have received a report about an issue with the emergency exit lighting in your building. I am in the area today and would need to carry out a quick inspection.\n\nEmployee: Shouldn't this issue go through with building management?\n\nCaller: Normally yes, but we need to check it within 24 hours for the report. This wont take long. I just need somebody to let me into the building so i can check the exits and the electrical panles.\n\nEmployee: I am unsure if i have access to everything.\n\nCaller: That's fine. If you could let me in and show me where the exits are and i can take it from there",
+        "suspiciousElements": [
+            "but we need to check it within 24 hours for the report.",
+            "I just need somebody to let me into the building so i can check the exits and the electrical panles.",
+            "If you could let me in and show me where the exits are and i can take it from there"
+        ],
+        "redFlags": [
+            "The caller claims to be a government inspector without any official verification",
+            "They ask for immediate access to the building without going through proper channels",
+            "Real inspections are normally scheduled through building management and require proper identification",
+            "Employees should verify official visitors before allowing access and should not compromise security protocols for unverified individuals"
+        ]
+    },
+    {
+        "id": 3,
+        "caller": "Jacob Michael - New Employee",
+        "callType": "First Day Help Request",
+        "phoneNumber": "Mobile: +1 (555) 394-8172",
+        "preview": "New hire calling, lost and can't access building, needs help getting in...",
+        "time": "This morning",
+        "duration": "3:20",
+        "unread": true,
+        "riskLevel": "medium",
+        "transcript": "Caller: Hi, my name is Jacob Michael. Today is actually my first day and i think i have an issue with my access badge.\n\nEmployee: What seems to be the issue?\n\nCaller: I'm standing outside the main entrance but my badge doesn't seem to work yet. I dont think it might be activated yet.\n\nEmployee: Did you contact HR yet?\n\nCaller: I tried but nobody is answering at the moment. I am already running late and I am supposed to be meeting my manager soon\n\nEmployee: I am not too sure I can let people in.\n\nCaller: I understand. But if this helps i can show you my ID badge and my offer letter hen you come down. I just need to get inside so i can sort the badge issue with HR",
+        "suspiciousElements": [
+            "I'm standing outside the main entrance but my badge doesn't seem to work yet.",
+            "I am already running late and I am supposed to be meeting my manager soon",
+            "I just need to get inside so i can sort the badge issue with HR"
+        ],
+        "redFlags": [
+            "The caller asks an employee to let them into the building.",
+            "They use sympathy by saying it is their first day and they are running late.",
+            "Access problems should be handled by HR or building security, not individual employees.",
+            "Employees should not bypass security protocols to help someone they have not verified, even if they claim to be a new employee."
+        ]
+    },
+    {
+        "id": 6,
+        "caller": "Detective Bob - Police Investigation",
+        "callType": "Police Investigation Call",
+        "phoneNumber": "+1 (555) 237-6894",
+        "preview": "Detective investigating workplace theft, needs employee information confidentially...",
+        "time": "Yesterday",
+        "duration": "6:15",
+        "unread": true,
+        "riskLevel": "critical",
+        "transcript": "Caller: Hello, this is Detective Bob from the Police Department.\n\nEmployee: Hi, What can i help you with?\n\nCaller: I am currently working on an investigation and your company has come up in a few enquiries. I just need to confirm some details \n\nEmployee: What kind of details?\n\nCaller: We need to locate an individual who might work here. Could you tell me if an individual named Ben Reacher works at your company?\n\nEmployee: That sounds like confidential HR information.\n\nCaller: I understand your concern but this is a part of an active investigation. It would also help if you could tell me which departament they work in and what their usual hours are.\n\nEmployee: I think i would need to check with management first\n\nCaller: That's fine but the sooner we can get this information and confirm it the better this is for our investigation.",
+        "suspiciousElements": [
+            "this is Detective Bob from the Police Department",
+            "I am currently working on an investigation and your company has come up in a few enquiries",
+            "Could you tell me if an individual named Ben Reacher works at your company?"
+        ],
+        "redFlags": [
+            "The caller claims to be law enforcement without providing verifiable information.",
+            "They ask for employee information over the phone without proper authorization.",
+            "Real police investigations usually contact company management of legal teams.",
+            "Employees should not share staff information with unknown callers."
+        ]
+    }
+]
