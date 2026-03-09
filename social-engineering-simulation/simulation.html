@@ -1,10 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <link rel ="stylesheet" href="simulation.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Engineering Simulation</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
+    <div class="container">
+        <div class="header">
+            <h1>Social Engineering Simulation</h1>
+            <div class="stats">
+                <div class="stats-item">
+                    <span class="stats-label">Score:</span>
+                    <span class="stats-value" id="score">0</span>
+                </div>
+                <div class="stats-item">
+                    <span class="stats-label">Completed:</span>
+                    <span class="stats-value" id="complete">0</span>
+                </div>
+            </div>
+        </div>
+        <div class="tab">
+            <button class="tab-button on" onclick="switchTab('email-scenario')"id="email-tab">
+                Email Scenarios
+            </button>
+            <button class="tab-button" onclick="switchTab('calls')"></button>
+        </div>
+    </div>
 </body>
-<script src="social-engineering-simulation/simulation.js"></script>
 </html>
+
