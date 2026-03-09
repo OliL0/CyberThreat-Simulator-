@@ -3,31 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Social Engineering Simulation</title>
+    <title>Social Engineering Simulator </title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1>Social Engineering Simulation</h1>
+            <h1>Social Engineering Simulator</h1>
             <div class="stats">
-                <div class="stats-item">
-                    <span class="stats-label">Score:</span>
-                    <span class="stats-value" id="score">0</span>
+                <div class="stat-item">
+                    <span class="stat-label">Score:</span>
+                    <span class="stat-value" id="score">0</span>
                 </div>
-                <div class="stats-item">
-                    <span class="stats-label">Completed:</span>
-                    <span class="stats-value" id="complete">0</span>
+                <div class="stat-item">
+                    <span class="stat-label">Completed:</span>
+                    <span class="stat-value" id="completed">0</span>
                 </div>
             </div>
         </div>
-        <div class="tab">
-            <button class="tab-button on" onclick="switchTab('email-scenario')"id="email-tab">
-                Email Scenarios
+        <div class="tabs">
+            <button class="tab-button active" onclick="switchTab('emails')" id="emailTab">
+                Emails Scenarios 
             </button>
-            <button class="tab-button" onclick="switchTab('calls')"></button>
+            <button class="tab-button" onclick="switchTab('calls')" id="callTab">
+                Call Scenarios 
+            </button>
+        </div>
+                <div class="stats-item">
+                    <span class="stats-label">Failed:</span>
+                    <span class="stats-value" id="failed">0</span>
+                </div>
+        <div class="main-content">
+            <div class="inbox">
+                <div class="inbox-header">
+                    <h2 id="inboxTitle">Inbox</h2>
+                </div>
+                <div class="inbox-list" id="inboxList"></div>
+            </div>
+            <div class="scenario">
+                <div class="scenario-placeholder" id="placeholder">
+                    <div class="placeholder-content">
+                        <h3>Select a scenario to begin</h3>
+                        <p>Choose an email or call transcript from the inbox to start. Press on any suspicious text in the scenario to identify suspicious elements</p>
+                    </div>
+                </div>
+                <div class="scenario-content" id="scenarioContent"></div>
+            </div>
         </div>
     </div>
+    <div class="" id="feedbackM">
+        <div class="">
+            <div id=""></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
-
