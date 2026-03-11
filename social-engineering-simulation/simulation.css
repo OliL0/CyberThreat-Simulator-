@@ -1,0 +1,220 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    color: #333;
+    background-color:#cccdcf;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    min-height: 100vh;
+}
+.containter{
+    background-color: rgba(63, 146, 173, 0.467);
+    color:#333;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    padding: 10px 20px;
+    width: 100%;
+    max-width: 1500px;
+    height: 750px;
+    overflow: hidden;
+}
+.header {
+    background: rgba(63, 146, 173, 0.467);
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+}
+.header h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color:#333;
+}
+.stats{
+    display: flex;
+    gap: 20px;
+    font-size: 10px;
+    color:#333;
+}
+.stat-label {
+    opacity: 1;
+}
+.stat-value{
+    padding: 5px 10px;
+    font-weight:bold;
+    background-color: rgba(35, 85, 102, 0.767);
+    color: white;
+    border-radius: 20px;
+}
+.main-content {
+    display: flex;
+    flex:1;
+    overflow: auto;
+}
+.tabs {
+    display: flex;
+    background: #d7dae0;
+    border-bottom: 2px solid #bebebe;
+    padding: 0 30px;
+}
+.tab-button{
+    padding: 15px 30px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    color: #333;
+    background: transparent;
+}
+.tab-button:hover {
+    color: grey;
+    background-color: #0000;
+}
+.tab-button.active {
+    color: #333;
+    border-bottom: 3px solid #333;
+}
+
+
+.main-content {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+
+.inbox { 
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+    background: #cccdce;
+    box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.1);
+    border-right: 2px solid grey;
+}
+.inbox-header {
+    padding: 10px 20px;
+    border-bottom: 2px solid grey;
+    background: #cccdce;
+}
+.inbox-header h2 {
+    font-size: 25px;
+    font-weight: bold;
+    color: #333;
+}
+.inbox-list {
+    flex: 1;
+    overflow-y: auto;
+}
+.inbox-item {
+    padding: 10px 15px;
+    border-bottom: 2px solid grey;
+    cursor: pointer;
+    background: #cccdce;
+    position: relative;
+}
+.inbox-item:hover {
+    background: grey;
+}
+.inbox-item.active {
+    background: grey;
+    border-left: 5px solid #333;
+}
+.inbox-item.complete {
+    opacity: 0.5;
+    cursor: default;
+}
+.scenario-type {
+    display: inline-block;
+    padding: 2px 8px;
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+
+}
+
+.scenario-type.email {
+    background: #dbeafe;
+    color: lightskyblue;
+}
+.scenario-type.call {
+    background: #dbeafe;
+    color: forestgreen;
+}
+
+.inbox-sender {
+    font-weight: bold;
+    color: #333;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.inbox-subject {
+    color: #333;
+    font-size: 13px;
+    margin-bottom: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.inbox-preview {
+    color: #6b7280;
+    font-size: 12px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; 
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-height: 1.4;
+}
+.inbox-time {
+    color: #333;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.scenario {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background: #cccdce;
+}
+.scenario-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 50px;
+}
+.placeholder-content{
+    text-align: center;
+    color: #333;
+}
+.placeholder-content h3 {
+    font-size: 20px;
+    color: #333;
+}
+.scenario-content {
+    display: none;
+    flex-direction: column;
+    height: 100%;
+}
+.scenario-content.active {
+    display: flex;
+}   
+
+
+.sceanrio-header {
+    padding: 20px 30px;
+    border-bottom: 2px solid grey;
+    background: #cccdce;
+}

@@ -7,4 +7,4 @@ returnmainButton.addEventListener("click", () => {
     window.location.href = "../index.html";
 });
 
-fetch ("questions.json")
+fetch ("questions/questions.json")
