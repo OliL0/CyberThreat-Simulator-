@@ -85,13 +85,11 @@ body{
     border-bottom: 3px solid #333;
 }
 
-
 .main-content {
     display: flex;
     flex: 1;
     overflow: hidden;
 }
-
 
 .inbox { 
     width: 380px;
@@ -157,7 +155,6 @@ body{
     font-size: 15px;
     margin-bottom: 5px;
 }
-
 .inbox-subject {
     color: #333;
     font-size: 13px;
@@ -166,22 +163,19 @@ body{
     text-overflow: ellipsis;
     white-space: nowrap;
 }
-
 .inbox-preview {
-    color: #6b7280;
-    font-size: 12px;
+    color:rgb(226, 222, 222);
+    font-size: 15px;
     display: -webkit-box;
-    -webkit-line-clamp: 2; 
     -webkit-box-orient: vertical;
     overflow: hidden;
-    line-height: 1.4;
+    line-height: 1.5;
 }
 .inbox-time {
     color: #333;
     font-size: 12px;
     margin-top: 5px;
 }
-
 .scenario {
     flex: 1;
     display: flex;
@@ -224,7 +218,6 @@ body{
     color: #333;
     margin-bottom: 12px;
 }
-
 .scenario-meta {
     display: flex;
     gap: 20px;
@@ -296,8 +289,6 @@ body{
     background: rgb(133, 1, 1);
 }
 
-
-
 .scenario-body {
     flex: 1;
     padding: 30px;
@@ -314,7 +305,6 @@ body{
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     user-select: none;
 }
-
 /* text interaction styling correct or wrong*/
 .clickable {
     cursor:pointer;
@@ -343,10 +333,6 @@ body{
     cursor: default;
 }
 
-
-
-
-
 /* progress section styling*/
 .progress-section{
     padding: 20px 30px;
@@ -372,4 +358,195 @@ body{
     background: rgb(126, 206, 6);
     border-radius: 5px;
 }
-.
+.found-sus-element {
+    padding: 8px 12px;
+    background: #d1fae5;
+    color: rgb(126, 206, 6);
+    border-radius: 5px;
+    font-size: 15px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+.found-sus-element::before{
+    content: "✓";
+    font-weight: bold;
+}
+
+/* Buttons in scenario styling */
+.scenario-action { 
+    padding: 20px 30px;
+    border-top: 1px solid #e5e7eb;
+    display:flex;
+    gap:10px;
+    background: #cccdce;
+}
+.button {
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    font-size: 15px;
+    font-weight: 550;
+    cursor: pointer;
+    flex:1;
+}
+.button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+.button-primary {
+    background:rgba(35, 85, 102, 0.767);
+    color:white;
+}
+.button-primary:hover:not(:disabled) {
+    background-color: rgba(35, 85, 102, 0.767);
+    transform: scale(1.05);
+}
+
+/* Feedback section styling */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+.modal-overlay.active {
+    display: flex;
+}
+.modal-content {
+    background: white;
+    border-radius: 10px;
+    padding: 30px;
+    max-width: 550px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+.modal-content h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #333;
+}
+.modal-result {
+    font-size: 16px;
+    font-weight: 550;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+.modal-result.success {
+    background: white;
+    color: rgb(126, 206, 6);
+}
+.modal-result.partial {
+    background: white;
+    color: #e05f0e;
+}
+.modal-result.fail {
+    background: white;
+    color:rgb(133, 1, 1);
+}
+.modal-points {
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    margin: 20px 0;
+    color:rgba(35, 85, 102, 0.767);
+}
+.modal-stat {
+    text-align: center;
+    padding: 16px;
+    background: white;
+    border-radius: 10px;
+}
+.moda-stats-value {
+    font-size: 25px;
+    font-weight:600;
+    color: #333;
+}
+.modal-stats-label {
+    font-size: 14px;
+    color: rgba(35, 85, 102, 0.767);
+    margin-top: 5px;
+}
+.modal-redflags {
+    margin-top: 25px;
+}
+.modal-redflags h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
+.modal-redflags ul {
+    list-style: none;
+    padding: 0;
+}
+.modal-redflags li {
+    padding: 12px 14px;
+    background: white;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    color:rgb(73, 71, 71);
+    font-size: 15px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+.modal-redflags li.found{
+    background: white;
+    color:rgb(126, 206, 6);
+}
+.modal-redflags li.nfound {
+    background: white;
+    color:rgb(133, 1, 1);
+}
+
+
+
+
+
+.modal-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+.modal-button {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 550;
+    cursor: pointer;
+}
+.modal-button-primary {
+    background:rgba(35, 85, 102, 0.767);
+    color:white;
+}
+.modal-button-primary:hover {
+    background-color: rgba(35, 85, 102, 0.767);
+    transform: scale(1.05);
+}
+
+
+/* custom scrollbar styling */
+::-webkit-scrollbar {
+    width: 16px;
+}
+
+::-webkit-scrollbar-track {
+    background: #cccdcf;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #235566;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+}
