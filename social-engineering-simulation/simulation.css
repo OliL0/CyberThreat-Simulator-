@@ -164,7 +164,7 @@ body{
     white-space: nowrap;
 }
 .inbox-preview {
-    color:rgb(226, 222, 222);
+    color: #333;
     font-size: 15px;
     display: -webkit-box;
     -webkit-box-orient: vertical;
