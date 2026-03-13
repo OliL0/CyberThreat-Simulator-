@@ -85,6 +85,8 @@ function chooseScenario(id) {
     const scenarioContent = document.getElementById('scenarioContent');
     scenarioContent.classList.add('active');
 
+    loadInteractiveEmail();
+
 }
 
 function loadInteractiveEmail (containter, badgeClass, riskLevel) {
@@ -98,6 +100,42 @@ function loadInteractiveEmail (containter, badgeClass, riskLevel) {
             <div class = "scenario-meta">
                 <span><strong>From: </strong> ${currentScenario.sender}</span>
                 <span><strong>Time: </strong> ${currentScenario.time}</span>
+                ${currentScenario.emailAddress ? `<span><strong>Email:</strong>${currentScenario.emailAddress}</span>` : ''}
+            </div>
+        </div>
+        <div class = "game-instructions">
+            <div class = "instruction-text">
+                <strong>Click any phrases you think are suspicious</strong> 
+                Find all ${currentScenario.suspiciousElements.length} suspicious elements
+            </div>
+            <div class = "attempts-display">
+                <span class = "attempt-label"> Wrong Clicks: </span>
+                <div class = "attempt-dots" id = "attemptDots">
+                    <div class = "attempt-dot"></div>
+                    <div class = "attempt-dot"></div>
+                    <div class = "attempt-dot"></div>
+                    <div class = "attempt-dot"></div>
+                    <div class = "attempt-dot"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class = "progress-section">
+            <div class = "progress-bar-containter">
+                <div class = "progress-label">
+                    <span>Suspicious Elements Found: </span>
+                    <span id = "progressText" >0 / ${currentScenario.suspiciousElements.length}</span>
+                </div>
+                <div class = "progress-bar">
+                    <div class = "progress-fill" id = "progressFill" style = "width: 0%></div>
+                </div>
+            </div>
+        </div>
+
+        <div class = "scenario-actions">
+            <button class = " button button-primary" onclick = "submitScenario()" id = "submitButton">
+                Submit scenario
+            </button>
         </div>
         `
 }
