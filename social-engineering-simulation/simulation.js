@@ -89,9 +89,9 @@ function chooseScenario(id) {
 
 }
 
-function loadInteractiveEmail (containter, badgeClass, riskLevel) {
-    const interactiveText = makeTextClickable(currentScenario.body, currentScenario.clickableFlags);
-    containter.innerHTML = `
+function loadInteractiveEmail (container, badgeClass, riskLevel) {
+    const interactiveText = makeTextClickable(currentScenario.body, currentScenario.suspiciousElements);
+    container.innerHTML = `
         <div class = "scenario-header">
             <div class = "scenario-subject">
                 ${currentScenario.subject}
@@ -127,7 +127,7 @@ function loadInteractiveEmail (containter, badgeClass, riskLevel) {
                     <span id = "progressText" >0 / ${currentScenario.suspiciousElements.length}</span>
                 </div>
                 <div class = "progress-bar">
-                    <div class = "progress-fill" id = "progressFill" style = "width: 0%></div>
+                    <div class = "progress-fill" id = "progressFill" style = "width: 0%"></div>
                 </div>
             </div>
         </div>
@@ -137,5 +137,27 @@ function loadInteractiveEmail (containter, badgeClass, riskLevel) {
                 Submit scenario
             </button>
         </div>
-        `
+   `; 
 }
+
+
+function makeTextClickable(text, suspiciousElements){
+    const susElementPosition = [];
+    if (suspiciousElements && suspiciousElements.length > 0) {
+        suspiciousElements.forEach((suselementText, index) => {
+        const regex = new RegExp(escapeRegex(suselementText), 'gi')
+        let match;
+        while ((match = RegExp.exec(text)) !== null) {
+            susElementPosition.push({
+                start:match.index,
+                end: match.index + match [0].length,
+                index : index,
+                text : match[0]
+            })
+        }
+        })
+    }
+}
+
+
+document.addEventListener('DOMContentLoaded', loadScenarios);
