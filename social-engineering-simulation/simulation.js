@@ -28,8 +28,8 @@ async function loadScenarios() {
         ScenariosCompleted = emailScenarios.length + transcriptScenarios.length;
         displayInbox();
     }catch (error) {
-        console.error('Cant load scenario', error);//returns an error in console if cant load
-        alert('fail cant load');//popup of fail cant load when trying to do loadScenaios within console
+        console.error('Cant load scenarios', error);//returns an error in console if cant load
+        alert('Fail cant load');//popup of fail cant load when trying to do loadScenaios within console
     }
 }
 
@@ -55,6 +55,7 @@ function displayInbox() {
 
 //Tab switching for the email and call tabs
 function changeTab(tab) {
+    try{
     selectedTab = tab;
     document.getElementById('emailTab').classList.toggle('active', tab === 'email');
     document.getElementById('transcriptTab').classList.toggle('active', tab === 'transcript');
@@ -64,9 +65,13 @@ function changeTab(tab) {
     document.getElementById('placeholder').style.display = 'flex';
     document.getElementById('scenarioContent').classList.remove('active');
     displayInbox();
+    } catch(error) {
+    console.error("failed to change tab:", error)//returns an error if it cant switch tabs or load other content 
+    }
 }
 
 function chooseScenario(id) {
+    try{
     const scenarios = selectedTab === 'email' ? emailScenarios : transcriptScenarios;
     currentScenario = scenarios.find(scenario => scenario.id === id);
 
@@ -85,11 +90,47 @@ function chooseScenario(id) {
     const scenarioContent = document.getElementById('scenarioContent');
     scenarioContent.classList.add('active');
 
-    loadInteractiveEmail();
+    loadInteractiveEmail(scenarioContent);
+    loadInteractiveScenarios();
+}catch (error) {
+    console.error("failed to load scenario:", currentScenario, error)
+}
+}
 
+function loadInteractiveScenarios() {
+    const scenarioContent = document.getElementById('scenarioContent');
+
+    const badgeType = {
+        'critical': 'badge-critical',
+        'high': 'badge-high',
+        'medium': 'badge-medium',
+        'low': 'badge-low'
+    };
+    let badgeClass;
+    if (badgeType[currentScenario.riskLevel]) {
+        badgeClass = badgeType[currentScenario.riskLevel];
+    } else {
+        badgeClass = 'badge-medium';
+    }
+    let riskLevel;
+    if (currentScenario.riskLevel === 'critical') {
+        riskLevel = 'Critical';
+    } else if (currentScenario.riskLevel === 'high') {
+        riskLevel = 'High';
+    } else if (currentScenario.riskLevel === 'medium') {
+        riskLevel = 'Medium';
+    } else {
+        riskLevel = 'Low';
+    }
+    if (selectedTab === 'emails') {
+        loadInteractiveEmail(scenarioContent, badgeClass, riskLevel)
+    }
 }
 
 function loadInteractiveEmail (container, badgeClass, riskLevel) {
+    console.log(currentScenario)
+    try {
+    const scenarioContent = document.getElementById('scenarioContent')
     const interactiveText = makeTextClickable(currentScenario.body, currentScenario.suspiciousElements);
     container.innerHTML = `
         <div class = "scenario-header">
@@ -119,6 +160,11 @@ function loadInteractiveEmail (container, badgeClass, riskLevel) {
                 </div>
             </div>
         </div>
+        <div id="scenario-body">
+            <div class = "scenario-t" id = "interactiveBody">
+                ${interactiveText}
+            </div>
+        </div>
         
         <div class = "progress-section">
             <div class = "progress-bar-containter">
@@ -137,9 +183,12 @@ function loadInteractiveEmail (container, badgeClass, riskLevel) {
                 Submit scenario
             </button>
         </div>
-   `; 
+   `;
+   clickListeners();
+   }catch (error) {
+    console.error("failed to load email section:", error)
+   }
 }
-
 
 function makeTextClickable(text, suspiciousElements){
     const susElementPosition = [];
@@ -147,7 +196,7 @@ function makeTextClickable(text, suspiciousElements){
         suspiciousElements.forEach((suselementText, index) => {
         const regex = new RegExp(escapeRegex(suselementText), 'gi')
         let match;
-        while ((match = RegExp.exec(text)) !== null) {
+        while ((match = regex.exec(text)) !== null) {
             susElementPosition.push({
                 start:match.index,
                 end: match.index + match [0].length,
@@ -157,6 +206,57 @@ function makeTextClickable(text, suspiciousElements){
         }
         })
     }
+
+
+
+    susElementPosition.sort(function(a, b) {//sorts the suspicious elements by position 
+        return a.start - b.start;
+    });
+
+    let result = '';//makes all the text into clickable elements so that it would make cheating not possible
+    let lastIndex =0;
+    const phrases = text.split(/([.!?\n]+)/)//splits the sentences in the body using the special characters
+    let currentPosition = 0;
+
+    phrases.forEach(function(phrase) {
+        if (phrase.trim().length === 0) {
+        result += phrase;
+        currentPosition += phrase.length;
+        return;
+    }
+
+    const element = susElementPosition.find(function(f) {
+        return f.start >= currentPosition && f.end <= currentPosition + phrase.length;
+    });
+        if (element) {
+            const start = element.start - currentPosition;
+            const end = element.end - currentPosition;
+            const before = phrase.slice(0, start);
+            const suselementText = phrase.slice(start, end);
+            const after = phrase.slice(end);
+
+        if (before.trim()) result += `<span class="clickable" data-safe="true">${before}</span>`;
+        result += `<span class="clickable" data-sus="${element.index}">${suselementText}</span>`;
+        if (after.trim()) result += `<span class="clickable" data-safe="true">${after}</span>`;
+    } else {
+        result += `<span class="clickable" data-safe="true">${phrase}</span>`;
+    }
+    currentPosition += phrase.length;
+    });
+
+    return result;
+}
+function escapeRegex(string) {
+    return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+}
+
+function clickListeners() {
+    const clickableElement = document.querySelectorAll('.clickable');
+    clickableElement.forEach(function(element) {
+        element.addEventListener('click', function() {
+            handleSusClick(this);
+        });
+    });
 }
 
 

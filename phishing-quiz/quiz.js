@@ -16,14 +16,14 @@ let previousDifficulty = [];
 let answeredScenario = false;
 
 fetch ("questions/questions.json")
-    .then(r => r.json())
+    .then(response => response.json())
     .then(data => {
         questions = data.scenarios;
     });
 
 
 function beginQuiz() {
-    scenarios = [...questions].sort(() => Math.random() - 0.5);
+    scenarios = [questions].sort(() => Math.random() - 0.5);
     currentScenario = 0;
     score = 0;
     wrong = 0;
@@ -34,7 +34,8 @@ function beginQuiz() {
 }
 
 function loadScenario() {
-    const q = scenarios[current];
+    try {
+    const question = scenarios[current];
     answeredScenario = false;
 
     document.getElementById("main-title").textContent = question["main-title"];
@@ -54,4 +55,7 @@ function loadScenario() {
     const legitButton = document.querySelector(".legit-button");
     phishingButton.disabled = false;
     legitButton.disabled = false;
+} catch (error) {
+    console.error("failed to load scenario:", error)
+}
 }
