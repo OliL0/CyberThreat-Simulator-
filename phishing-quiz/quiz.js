@@ -23,7 +23,7 @@ fetch ("questions/questions.json")
 
 
 function beginQuiz() {
-    scenarios = [questions].sort(() => Math.random() - 0.5);
+    scenarios = [questions/questions.json].sort(() => Math.random() - 0.5);
     currentScenario = 0;
     score = 0;
     wrong = 0;
@@ -35,15 +35,14 @@ function beginQuiz() {
 
 function loadScenario() {
     try {
-    const question = scenarios[current];
+    const questions = scenarios[current];
     answeredScenario = false;
 
-    document.getElementById("main-title").textContent = question["main-title"];
-    document.getElementById("scene-info").textContent = question["scene-info"];
-    document.getElementById("sender").textContent = "From: " + question.scenario.sender;
-    document.getElementById("message-date").textContent = "Date: " + question.scenario["message-date"];
-    document.getElementById("title").textContent = question.scenario.title;
-    document.getElementById("content").innerHTML = "<p>" + question.scenario.content + "</p>";
+    document.getElementById("scenario-header").textContent = questions["main-title"];
+    document.getElementById("sender-name").textContent = "From: " + questions.scenario.sender;
+    document.getElementById("date").textContent = "Date: " + questions.scenario["message-date"];
+    document.getElementById("scene-title").textContent = questions.scenario.title;
+    document.getElementById("scenario-content").innerHTML = "<p>" + questions.scenario.content + "</p>";
 
     const feedbackBox = document.getElementById("feedback-overlay");
     if (feedbackBox) {
@@ -59,3 +58,22 @@ function loadScenario() {
     console.error("failed to load scenario:", error)
 }
 }
+function phishingAnswer() {selectAnswer(true); }
+function legitAnswer () {selectAnswer(false); }
+
+function selectAnswer(phishingAnswer) {
+    if (respond.state) return;
+    respond.state =true;
+    const question = question.state[current.state];
+    const correct = (phishingAnswer === question.isPhishing);
+    const phishingB = document.querySelector(".phishing-button");
+    const legitB = document.querySelector(".legit-button");
+    phishingB.disabled = legitB.disabled = true;
+
+    if (phishingAnswer) {
+        phishingB.classList.add("correct");
+    } else {
+        phishingB.classList.add("wrong");
+    }
+}
+

@@ -259,5 +259,6 @@ function clickListeners() {
     });
 }
 
+function handleSusClick(element) {}
 
 document.addEventListener('DOMContentLoaded', loadScenarios);
