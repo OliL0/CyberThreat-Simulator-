@@ -1,7 +1,9 @@
 <!DOCTYPE html> 
 <html lang="en">
-    <link rel="stylesheet" href="quiz.css">
 <head>
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
     <div class="main-title">
         <div class="title" id="main-title">Loading...</div>
         <div class="info" id="scene-info">Info Loading</div>
@@ -10,26 +12,24 @@
         <button class="phishing-button" onclick = "phishingAnswer()">Phishing</button>
         <button class="legit-button" onclick="legitAnswer()">Legitimate</button>
     </div>
-</head>
-<body>
     <div class="wrapper">
         <div id ="scenario-box">
             <div class="scenario-header" id="scenario-header">
-                <div class="sender" id="sender-name">From: ....</div>
                 <div class="message-date" id="date">Date: ....</div>
             </div>
             <h1 id="scene-title">Loading Scenario...</h1>
             <div id="scenario-content">
                 <p>Loading content....</p>
             </div>
-            <div id="feedback-overlay"></div>
+            <div id="feedbackBox" style="display:none"></div>
         </div>
     
         <div class="answer-buttons">
             <button id="return-b">Return</button>
-            <button id="next-b">Next </button>
+            <button id="next-b" onclick="nextScenario()">Next </button>
         </div>
     </div>
-</body>
 <script src="quiz.js"></script>
+</body>
+
 </html>
