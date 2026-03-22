@@ -122,7 +122,7 @@ function loadInteractiveScenarios() {
     } else {
         riskLevel = 'Low';
     }
-    if (selectedTab === 'emails') {
+    if (selectedTab === 'email') {
         loadInteractiveEmail(scenarioContent, badgeClass, riskLevel)
     }
 }
@@ -258,7 +258,83 @@ function clickListeners() {
         });
     });
 }
+function completeScenario(success) {
+    const susTotal = currentScenario.suspiciousElements.length;
+    const foundCount =  foundsusElements.length;
+    let points = 0 
+    if (success){
+        if (wrongClicks === 0){
+            points = 100;
+        }else{
+            points = 100 - (wrongClicks * 10);
+            if (points < 50){
+                points= 50;
+            }
+        }
+    }else {
+        points = foundCount * 10;
+    }
+    score += points;
+    currentScenario.completed = true;
+    completedScenarios++;
 
-function handleSusClick(element) {}
+    showModalFeedback(success, points, foundCount, susTotal);
+}
+
+
+function handleSusClick(element) {
+    console.log("clicked!", element);
+    console.log(element.getAttribute('data-sus'));
+    if (element.classList.contains('found')) {
+        return;
+    }
+    if (element.classList.contains('wrong')) {
+        return;
+    }
+    const susValue = element.getAttribute('data-sus');
+    if (susValue !== null) {
+        const index= parseInt(susValue);
+        if(!foundsusElements.includes(index)) {
+            foundsusElements.push(index);
+            element.classList.add('found');
+            susElementsFound++;
+            updateProgress();
+            if (foundsusElements.length === currentScenario.suspiciousElements.length) {
+                completeScenario(true);
+            }
+        }
+    }else {
+        element.classList.add('wrong');
+        wrongClicks++;
+        attemptsLeft--;
+        updateAttempts();
+        setTimeout(function(){
+            element.classList.remove('wrong');
+        }, 500);
+
+        if (attemptsLeft <= 0){
+            completeScenario(false);
+        }
+    }
+}
+function updateAttempts() {//changes the colour of the attempt dots and changes them when wrong click// 
+    const dots = document.querySelectorAll('.attempt-dot');
+    const used = 5 - attemptsLeft;
+    dots.forEach(function(dot, index) {
+        if (index < wrongClicks) {
+            dot.classList.add('used');
+        }
+    });
+}
+//function to change the progress bar and found flags display //
+function updateProgress(){
+    const susTotal = currentScenario.suspiciousElements.length;
+    const percentage = (foundsusElements.length / susTotal) * 100;
+
+    document.getElementById('progressFill').style.width = percentage + '%';
+    document.getElementById('progressText').textContent = foundsusElements.length + '/' + susTotal;
+}
+
+
 
 document.addEventListener('DOMContentLoaded', loadScenarios);
