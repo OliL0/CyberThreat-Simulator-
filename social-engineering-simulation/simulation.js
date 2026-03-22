@@ -321,7 +321,7 @@ function updateAttempts() {//changes the colour of the attempt dots and changes 
     const dots = document.querySelectorAll('.attempt-dot');
     const used = 5 - attemptsLeft;
     dots.forEach(function(dot, index) {
-        if (index < wrongClicks) {
+        if (index < used) {
             dot.classList.add('used');
         }
     });
@@ -335,6 +335,58 @@ function updateProgress(){
     document.getElementById('progressText').textContent = foundsusElements.length + '/' + susTotal;
 }
 
-
-
+function submitScenario(){
+    const susTotal = currentScenario.suspiciousElements.length;
+    const foundCount = foundsusElements.length;
+    if (foundCount === susTotal){
+        completeScenario(true);
+    }else {
+        const confirmed = confirm(`you have found ${foundCount} out of ${susTotal} suspicious elements. submit anyways?`);
+        if (confirmed){
+            completeScenario(false);
+        }
+    }
+}
+function showModalFeedback(success, points, foundCount, susTotal){
+    const modal = document.getElementById('feedbackModal');
+    const modalBody = document.getElementById('modalBody');
+    let resultInfo ='';
+    if (success) {
+        resultInfo = "You found all suspicious elements";
+    }else {
+        resultInfo = "you didnt get them all";
+    }
+    let susList = '';
+    let i = 0;
+    while (i < currentScenario.suspiciousElements.length){
+        if (foundsusElements.includes(i)){
+            susList += "<li class=found>"+ currentScenario.suspiciousElements[i] + "</li>";
+        } else{
+            susList += "<li class=marked-wrong>" + currentScenario.suspiciousElements[i] + "</li>";
+        }
+        i++;
+    }
+    modalBody.innerHTML = 
+        "<h1>Scenario complete</h1>" +
+        "<p>" + resultInfo + "</p>" +
+        "<p>Score: " + points + " points</p>" +
+        "<p>Found: " + foundCount + " out of " + susTotal + "</p>" +
+        "<p>Wrong clicks: " + wrongClicks + '</p>' +
+        "<h3>Suspicious Elements:</h3>" +
+        "<ul>"+ susList + "</ul>" +
+        "<h3>Red flags in scenario: </h3>" +
+        "<ul>"+ currentScenario.redFlags + "</ul>"+
+        '<button class="modal-button" onclick="closeFeedbackModal()">Review</button>' +
+        '<button class="modal-button" onclick="nextScenario()">Next Scenario</button>';
+    modal.classList.add("active");
+}
+function closeFeedbackModal(){
+    document.getElementById("feedbackModal").classList.remove("active");
+}
+function nextScenario(){
+    closeFeedbackModal();
+    displayInbox();
+    document.getElementById("placeholder").style.display = "flex";
+    document.getElementById("scenarioContent").classList.remove("active");
+}
 document.addEventListener('DOMContentLoaded', loadScenarios);

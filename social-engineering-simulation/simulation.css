@@ -517,7 +517,7 @@ body{
     gap: 15px;
     margin-top: 25px;
 }
-.modal-button {
+.modal-button, .modal-button:hover {
     flex: 1;
     padding: 12px;
     border: none;
@@ -525,12 +525,8 @@ body{
     font-size: 15px;
     font-weight: 550;
     cursor: pointer;
-}
-.modal-button-primary {
     background:rgba(35, 85, 102, 0.767);
     color:white;
-}
-.modal-button-primary:hover {
     background-color: rgba(35, 85, 102, 0.767);
     transform: scale(1.05);
 }
